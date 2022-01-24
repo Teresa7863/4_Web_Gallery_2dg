@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La imatge de la música</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Andada+Pro:ital,wght@0,400;0,700;1,700&family=Open+Sans:wght@600;700&display=swap" rel="stylesheet">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html{
+            font-size: 32px;
+        }
+        img{
+            width: 100%;
+            height: auto;
+        }
+        a{
+            text-decoration: none;
+            font-family: var(--andanapro);
+            text-transform: uppercase;
+            color: var(--blau);
+        }
+        :root{
+            --blau: #14373d;
+            --groc: #f55f31;
+            --gris: #e5e5e5;
+            --opensans: 'Open Sans', sans-serif;
+            --andanapro: 'Andada Pro', serif;
+            --negrita: 700;
+        }
+        .container{
+            padding: 0 2em;
+        }
+        body>header{
+            display: flex;
+            padding: 50px 0;
+            text-align: center;
+            height: 100vh;
+            background-color: var(--groc);
+        }
+        h1{
+            display: contents;
+            flex-direction: column;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            align-items: center;
+            font-size: 1.5em;
+            font-family: var(--opensans);
+            font-weight: var(--negrita);
+            color: white;
+        }
+        h2{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            align-items: center;
+            font-size: 1em;
+            font-family: var(--andanapro);
+            color: white;
+        }
+        h3{
+            display: contents;
+            flex-direction: column;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            align-items: center;
+            font-family: var(--opensans);
+        }
+        nav a{
+            font-size: 0.75em;
+        }
+        section:first-child{
+            height: 100%;
+            background-color: var(--blau);
+            color: white;
+        }
+        section:first-child .container{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .cover{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            align-items: center;
+            flex-grow: 1;
+            min-width: 300px;
+            max-width: 678px;
+            min-height: 350px;
+            padding: 0.5em;
+            margin: 0.3em;
+            background-color: var(--gris);
+        }
+        .cover .cover_img{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            align-items: center;
+            padding: 0px;
+            width:100%;
+            max-height:200px;
+            background: coral;
+            flex-grow: 1;
+        }
+        .cover .cover_img img{
+            display: flex;
+            flex-direction: column;
+            height: 250px;
+            object-fit: cover;
+            object-position: center center;
+        }
+        .cover header{
+            display: flex;
+            width: 100%;
+            background-color: rgb(125, 201, 201);
+            justify-content: center;
+            align-items: center;
+            flex-grow: 1;
+        }
+        .cover h3{
+            font-family: var(--andanapro);
+            font-size: 0.5em;
+            color: var(--blau);
+        }
+        section:last-child{
+            height: 80vh;
+            background-color: var(--gris);
+            color: var(--blau);
+        }
+        footer{
+            height: 50vh;
+            background-color: var(--groc);
+            color: white;
+        }
+        /* @media (max-width:500px){
+            html{
+                font-size:20px;
+            }
+            h1{
+                color:green;
+            }
+        } */
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <hgroup>
+                <h1>Grups de la terreta</h1>
+                <h2>Evolució de les portades</h2>
+            </hgroup>
+            <nav>
+                <a href="#grups">grups</a>
+                <a href="#portades">portades</a>
+                <a href="#Fotos">Fotos</a>
+            </nav>
+        </div>
+    </header>
+    <main>
+            <section id="#Grups">
+                <h3>Grups</h3>
+                <div class="container">
+                    <div class="cover">
+                        <div class="cover_img">
+                            <img src="images/oques grasses logo.jfif"">
+                        </div>
+                        <header>
+                            <h3>Oques Grasses </h3>
+                        </header>
+                    </div>
+                    <div class="cover">
+                        <div class="cover_img">
+                            <img src="images/txarango.png" alt="">
+                        </div>
+                        <header>
+                            <h3>Txarango </h3>
+                        </header>
+                    </div>
+                    <div class="cover">
+                        <div class="cover_img">
+                            <img src="images/logo_zoopose.jpg" alt="">
+                        </div>
+                        <header>
+                            <h3>Zoo pose</h3>
+                        </header>
+                    </div>
+                </div>
+            </section>
+            <section id="#Portades">
+                <h3>Portades</h3>
+            </section>
+            <div class="container">
+                <div class="cover">
+                    <div class="cover_img">
+                        <img src="images/oques-grasses-digues-n-hi-com-vulguis-portada.jpg">
+                    </div>
+                    <header>
+                        <h3>Digues n'hi com vulguis</h3>
+                    </header>
+                </div>
+                    <div class="cover">
+                        <div class="cover_img">
+                            <img src="images/fans del sol.jfif">
+                        </div>
+                        <header>
+                            <h3>Fans del sol</h3>
+                        </header>
+                    </div>
+                        <div class="cover">
+                            <div class="cover_img">
+                                <img src="images/a tope amb la vida.jpg">
+                            </div>
+                            <header>
+                                <h3>A tope amb la vida</h3>
+                            </header>
+                        </div>
+            </div>
+    </main>
+    <footer id="#Fotos">
+            <h3>Fotos</h3>
+            <div class="container">
+
+            </div>
+    </footer>
+</body>
+</html>

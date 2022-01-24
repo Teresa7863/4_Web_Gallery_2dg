@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grups de la terreta</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Andada+Pro:ital,wght@0,400;0,700;1,700&family=Open+Sans:wght@600;700&display=swap" rel="stylesheet">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html{
+            font-size: 32px;
+        }
+        img{
+            width: 100%;
+            height: auto;
+        }
+        a{
+            text-decoration: none;
+            font-family: var(--andanapro);
+            text-transform: uppercase;
+            color: var(--blau);
+        }
+        :root{
+            --roig: #F24949;
+            --cian: #89DDC2;
+            --gris: #FFF9E8;
+            --blau: #0B152B;
+            --opensans: 'Open Sans', sans-serif;
+            --andanapro: 'Andada Pro', serif;
+            --negrita: 700;
+        }
+        .container{
+            padding: 0 2em;
+        }
+        body>header{
+            max-height: 100%;
+            max-width: 100%;
+            padding-left: 100px;
+            padding-right: 100px;
+            padding-top: 200px;
+            padding-bottom: 150px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            background-image: url(/sitioweb/images/inici/c.png); 
+            flex-grow: 3em;
+            object-fit: cover;
+            object-position: center;
+        }
+        header .container{
+            width: 100vh;
+            margin: 0px;
+            padding: 0px;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            flex-direction: column;
+            justify-content: center;
+            object-fit: cover;
+            object-position: center;
+        }
+        hgroup{
+            width: 100vh;
+            height: 48vh;
+            margin: 0px;
+            display: flex;
+            align-items: center;
+            flex-direction: column
+            
+
+        }
+        h1{
+            display: flex;
+            justify-content: center;
+            font-size: 2em;
+            font-family: var(--opensans);
+            font-weight: var(--negrita);
+            color: var(--gris);
+        }
+        h2{
+            font-size: 1em;
+            font-family: var(--opensans);
+            font-weight: var(--light);
+            color: var(--gris);
+            width: 100%;
+            height: 100%;
+            margin-bottom: 2em;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        h3{
+            font-size: 1em;
+            font-family: var(--opensans);
+            color: var(--blau); 
+            padding-top: 1em;
+            display: flex;
+            justify-content: center;
+            background-color: var(--roig);
+        }
+        h4{
+            font-family: var(--opensans);
+            color: #0B152B; 
+            display: flex;
+            justify-content: center;
+        }
+        h5{
+            font-size: 1em;
+            font-family: var(--opensans);
+            color: var(--blau); 
+            background-color: var(--gris);
+            padding-top: 1em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+        }
+        h6{
+            font-size: 1em;
+            font-family: var(--opensans);
+            color: var(--gris); 
+            background-color: var(--blau);
+            height: 100%;
+            width: 100%;
+            margin-top: 2em;
+            padding-top: 1em;
+            padding-bottom: 1em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+        }
+        nav{
+            padding: 1em 1em;
+            width: 100vh;
+            height: 10vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        nav a {
+            font-size: 0.75em;
+            color: var(--gris);
+            font-family: var(--opensans);
+            margin-left: 1em;
+            margin-right: 1em;
+            padding: 0.5em;
+            
+        }
+        nav a:hover {
+            color: var(--roig);
+            background-color: #faefd28a;
+            border-radius: 3%;
+            transform: scale(2.1);
+            
+        }
+        section:first-child .container{
+            height: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            background-color: var(--gris);
+            color: #0B152B;
+        }
+        section:last-child .container{
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        /*CARD PORTADES*/
+        .container_portades{
+            background-color: var(--gris);
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap-reverse;
+            align-content: stretch;
+            margin: 2em;
+        }
+        #grup1{
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            flex-grow: 1;
+            margin: 1em;
+            padding: 0.75em;
+        }
+        #grup2{
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            flex-grow: 1;
+            margin: 1em;
+            padding: 0.75em;
+        }
+        #grup3{
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            flex-grow: 1;
+            margin: 1em;
+            padding: 0.75em;
+        }
+        .cover{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            align-items: center;
+            flex-grow: 1;
+            min-width: 350px;
+            max-width: 350px;
+            min-height: 350px;
+            padding: 0.5em;
+            margin: 0.9em;
+            box-shadow: #0b152b9a 0px 0px 20px;
+            border-radius: 15px;
+            background-color: #faefd2d7;
+        }
+        .cover .cover_img{
+            display: flex;
+            justify-content: center;
+            object-fit: cover;
+            object-position: center;
+            width: 100%;
+            height: 300px;
+            border-radius: 10px;
+
+        }
+        .cover .cover_img img{
+            object-fit: cover;
+            object-position: center;
+            max-width: 100%;
+            max-height: 100%;
+            border-radius: 10px;
+
+        }
+        .cover header{
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            height: 50px;
+            align-items: center;
+            color: #0B152B;
+            background-color: #faefd2d7;
+        }
+        .cover h3{
+            font-family: var(--andanapro);
+            font-size: 0.5em;
+            background-color:#faefd2d7;
+        }
+
+
+
+        /*CARD GRUPS*/
+        .container_grups{
+            background-color: var(--roig);
+            display: flex;
+            padding-left: 2em;
+            padding-right: 2em;
+        }
+        .card_grups{
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            margin: 1em;
+            padding: 0.75em;
+            align-items: center;
+            width: 300px;
+            box-shadow: #0b152b9a 0px 0px 20px;
+            background-color: var(--gris);
+            border-radius: 15px;
+        }
+        .grups_img{
+            width: 250px;
+            height: 250px;
+        }
+        .grups_img img{
+            border-radius: 250px;
+            width: 250px;
+            height: 250px;
+            object-fit: cover;
+            object-position: center;
+        }
+        .card_grups header{
+            margin: 0.75em 0 0 0;
+            text-align: center;
+        }
+
+        section:last-child{
+            height: 100%;
+            background-color: var(--gris);
+            color: var(--roig);
+        }
+
+        
+
+
+        /*CARD FOOTER*/
+        footer{
+            height: 35vh;
+            background-color: var(--blau);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            
+        }
+        .grup1_xxss{
+            margin-top: 0em;
+            margin-left: 0em;
+            margin-right: 0em;
+            margin-bottom: 6em;
+            display: flex;
+            justify-content: center;
+            align-items: center
+        }
+        .card_xxss{
+            width: 5em;
+            height: 5em;
+            margin-top: 0em;
+            margin-left: 0em;
+            margin-right: 0em;
+            margin-bottom: 0em;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+
+        }
+        .card_xxss .xxss_img{
+            max-height: 2em;
+            width: 2em;
+        }
+        footer p:last-child{
+            margin-left: 34%;
+            background-color: var(--blau);
+        }
+
+        html{
+            scroll-behavior: smooth;
+        }
+        /*CARD PORTADES*/
+
+
+        /* @media (max-width:550px){
+            html{
+                font-size:20px;
+            }
+            h1{
+                color:green;
+            }
+            section:first-child .container{
+                flex-direction: column;
+            }
+            .cover{
+                display: flex;
+                align-items: center;
+                width: 500px;
+                height: 450px;
+                background-color: crimson;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+                flex-grow: 1;
+            }
+            .cover_img{
+                padding: 0;
+                width: 100%;
+                height: 300px;
+                align-items: center;
+                justify-content: flex-start;
+                background-color: darkgoldenrod;
+            }
+            .cover_img img{
+                height: 250px;
+                object-fit: cover;
+                object-position: center center;
+            }
+            .cover header{
+                display: flex;
+                width: 50%;
+                height: 100%;
+                flex-direction:column;
+                justify-content: center;
+                align-items: center;
+            }
+            .cover header h3{
+                font-size: 1.5em;
+                text-align: center;
+            }
+        } */
+    </style>
+</head>
+<link rel="icon" href="./sitioweb/images/icon/Music_29918.png">
+<body>
+    <header>
+        <div class="container">
+            <hgroup>
+                <h1>Grups de la terreta</h1>
+                <h2>Evolució de les portades</h2>
+            </hgroup>
+            <nav>
+                <ul>
+                    <a href="#grups">grups</a>
+                    <a href="#portades">portades</a>
+                    <a href="#xxss">xxss</a>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section id="grups"> 
+            <h3>GRUPS</h3>
+            <div class="container_grups">
+                <div class="card_grups">
+                    <div class="grups_img">
+                        <img src="sitioweb/images/grups/oques grasses.jpg" alt="oques grasses logo">
+                    </div>
+                    <header>
+                        <h4>OQUES GRASSES</h4>
+                        <blockquote>
+                            “Sabem que no és fácil però ens encanta fer-ho”
+                        </blockquote>
+                    </header>
+                </div>
+                <div class="card_grups">
+                    <div class="grups_img">
+                        <img src="sitioweb/images/grups/zoopose.jpg" alt="zoo logo">
+                    </div>
+                    <header>
+                        <h4>Z00</h4>
+                        <blockquote>
+                            “Ens agrada que la nostra  la músca faja ballar a la gent”
+                        </blockquote>
+                    </header>
+                </div>
+                <div class="card_grups">
+                    <div class="grups_img">
+                        <img src="sitioweb/images/grups/txarango.jpg" alt="txarango logo">
+                    </div>
+                    <header>
+                        <h4>TXARANGO</h4>
+                        <blockquote>
+                            “Aquesta ha sigut la nostra manera de conectar amb el món”
+                        </blockquote>
+                    </header>
+                </div>
+            </div>
+        </section>
+        <section id="portades">
+                <h5>PORTADES</h5>
+                <div class="container_portades">
+                    <div id="grup1">
+                        <div class="cover">
+                            <div class="cover_img">
+                                <img src="sitioweb/images/portades/Digues nhi com vulguis.jpg" alt="digues nhi com vulguis">
+                            </div>
+                            <header>
+                                <h3>Digues nhi com vulguis</h3>
+                            </header>
+                        </div>
+                        <div class="cover">
+                            <div class="cover_img">
+                                <img src="sitioweb/images/portades/fans del sol.jpg" alt="Fans del sol">
+                            </div>
+                            <header>
+                                <h3>Fans del sol</h3>
+                            </header>
+                        </div>
+                        <div class="cover">
+                            <div class="cover_img">
+                                <img src="sitioweb/images/portades/A tope amb la vida.jpg" alt="A tope amb la vida">
+                            </div>
+                            <header>
+                                <h3>A tope amb la vida</h3>
+                            </header>
+                        </div>
+                        <div class="cover">
+                            <div class="cover_img">
+                                <img src="sitioweb/images/grups/oques grasses.jpg" alt="Próximament...">
+                            </div>
+                            <header>
+                                <h3>Próximament...</h3>
+                            </header>
+                        </div>
+                    </div>    
+                    <div id="grup2">
+                        <div class="cover">
+                            <div class="cover_img">
+                                <img src="sitioweb/images/portades/tempestes venen del sud.jpg" alt="">
+                            </div>
+                            <header>
+                                <h3>Tempestes</h3>
+                            </header>
+                        </div>
+                        <div class="cover">
+                            <div class="cover_img">
+                                <img src="sitioweb/images/portades/raval.jpg" alt="">
+                            </div>
+                            <header>
+                                <h3>Raval</h3>
+                            </header>
+                        </div>
+                        <div class="cover">
+                            <div class="cover_img">
+                                <img src="sitioweb/images/portades/Llepolies.jpeg" alt="">
+                            </div>
+                            <header>
+                                <h3>Llepolies</h3>
+                            </header>
+                        </div>
+                        <div class="cover">
+                            <div class="cover_img">
+                                <img src="sitioweb/images/grups/zoopose.jpg" alt="">
+                            </div>
+                            <header>
+                                <h3>Próximament...</h3>
+                            </header>
+                        </div>
+                    </div>
+                    <div id="grup3">    
+                        <div class="cover">
+                            <div class="cover_img">
+                                <img src="sitioweb/images/portades/Benvinguts al llarg viatge.jpg" alt="">
+                            </div>
+                            <header>
+                                <h3>Benvinguts al llarg viatge</h3>
+                            </header>
+                        </div>
+                        <div class="cover">
+                            <div class="cover_img">
+                                <img src="sitioweb/images/portades/som riu.jpg" alt="">
+                            </div>
+                            <header>
+                                <h3>Som rui</h3>
+                            </header>
+                        </div>
+                        <div class="cover">
+                            <div class="cover_img">
+                                <img src="sitioweb/images/portades/El cor de la terra.jpg" alt="">
+                            </div>
+                            <header>
+                                <h3>El cor de la terra</h3>
+                            </header>
+                        </div>
+                        <div class="cover">
+                            <div class="cover_img">
+                                <img src="sitioweb/images/portades/de vent i ales.jpg" alt="">
+                            </div>
+                            <header>
+                                <h3>De vent i ales</h3>
+                            </header>
+                        </div>
+                    </div>
+                </div>
+            </section>   
+    </main>
+    <footer id="xxss">
+            <h6>XXSS</h6>
+                <div class="grup1_xxss">
+                    <div class="card_xxss">
+                        <div class="xxss_img">
+                            <img src="sitioweb/images/logos_footer/logo twitter.png" alt="twitter">
+                        </div>
+                    </div>
+                    <div class="card_xxss">
+                        <div class="xxss_img">
+                            <img src="sitioweb/images/logos_footer/logo intragram.png" alt="instagram">
+                        </div>
+                    </div> 
+                    <div class="card_xxss">
+                        <div class="xxss_img">
+                            <img src="sitioweb/images/logos_footer/logo facebook.png" alt="facebook">
+                        </div>
+                    </div> 
+                    <div class="card_xxss">
+                        <div class="xxss_img">
+                            <img src="sitioweb/images/logos_footer/logo gmail.png" alt="gmail">
+                        </div>
+                    </div>
+                </div>    
+    </footer>
+
+</body>
+</html>
